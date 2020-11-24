@@ -1,0 +1,78 @@
+.header{
+    height: 100px;
+    margin: 0;
+    padding: 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    margin: 0;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.title {
+    float: left;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title_link {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.nav {
+    display: inline;
+    float: right;
+    position: relative;
+}
+
+.nav_ul {
+    padding: 0;
+}
+
+.nav_li {
+    display: inline;
+    font-size: 1.2rem;
+    list-style: none;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 0;
+    font-weight: lighter;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+            sans-serif;
+}
+
+.nav_link {
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    transition: color 0.4s;
+}
+
+.nav_link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.green {
+    color: green;
+    display: inline;
+}
+
+.white {
+    color: white;
+    display: inline;
+}
+
+.red {
+    color: red;
+    display: inline;
+}
