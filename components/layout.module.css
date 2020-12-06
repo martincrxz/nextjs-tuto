@@ -1,5 +1,60 @@
 .container {
-    max-width: 100%;
-    padding: 0 2rem;
-    margin: 0 auto 2rem;
-  }
+    max-width: 36rem;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+}
+  
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.green {
+    color: green;
+    display: inline;
+}
+
+.white {
+    color: white;
+    display: inline;
+}
+
+.red {
+    color: red;
+    display: inline;
+}
+
+.title {
+    float: left;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.titleLink:hover {
+    text-decoration: none;
+}
+
+.footerText {
+    text-align: right;
+}
+
+.hr {
+    border-right-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(234, 234, 234);
+    margin-top: 3rem;
+    margin-right: 0px;
+    margin-bottom: 1.5rem;
+    margin-left: 0px;
+}

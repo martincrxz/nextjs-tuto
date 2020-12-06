@@ -1,32 +1,48 @@
 import Head from 'next/head'
-import Header from '../components/header'
 import Layout from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
+import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
+import Date from '../components/date'
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData()
+  return {
+    props: {
+      allPostsData
+    }
+  }
+}
+
+export default function Home({allPostsData}) {
   return (
-    <div>
+    <Layout home>
       <Head>
         <title>parlitaliano | Home</title>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet"></link>
       </Head>
 
-      <main>
-        <Layout>
-          <Header>
-          </Header>
-          <h2 className="subtitle">Imparare l'italiano puoi essere molto facile!</h2>
-        </Layout>
-      </main>
-
-      <style jsx>{`
-        .subtitle {
-          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-          font-size: 36px;
-          text-align: center;
-          font-weight: normal;
-        }
-      `}</style>
-    </div>
+        <section className={utilStyles.headingMd}>
+          <p>
+            In questo sitio web voi potete trovare picole lezioni di italiano per practicare la lingua di una forma facile e piacevole.
+          </p>
+        </section>
+        <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+          <h2 className={utilStyles.headingLg}>Lezioni</h2>
+          <ul className={utilStyles.list}>
+            {allPostsData.map(({id, date, title}) => (
+              <li className={utilStyles.listItem} key={id}>
+                <Link href={`/posts/${id}`}>
+                  <a>{title}</a>
+                </Link>
+                <br />
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small>
+                <br />
+              </li>
+            ))}
+          </ul>
+        </section>
+    </Layout>
   )
 }
